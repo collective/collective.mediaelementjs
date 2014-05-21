@@ -24,5 +24,12 @@
         permission="zope2.View"
         />
 
+    <browser:page
+        name="mediaelementjs"
+        for="plone.app.contenttypes.interfaces.IFile"
+        class=".view.DXFile"
+        template="file_pact.pt"
+        permission="zope2.View"
+        />
 
 </configure>

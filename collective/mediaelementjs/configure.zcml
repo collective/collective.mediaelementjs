@@ -26,6 +26,21 @@
         handler=".events.ChangeFileView"
         />
 
+    <subscriber
+        for="plone.app.contenttypes.interfaces.IFile
+             zope.lifecycleevent.interfaces.IObjectCreatedEvent"
+        handler=".events.ChangeDXFileView"
+        />
+    <subscriber
+        for="plone.app.contenttypes.interfaces.IFile
+             zope.lifecycleevent.interfaces.IObjectModifiedEvent"
+        handler=".events.ChangeDXFileView"
+        />
+
+
+
+zope.lifecycleevent.IObjectInitializedEvent
+
     <genericsetup:registerProfile
         name="default"
         title="MediaElementJS"

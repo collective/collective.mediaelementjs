@@ -8,6 +8,8 @@ from collective.mediaelementjs.metadata_extraction import defensive_get
 from Products.ATContentTypes.interfaces.file import IFileContent
 from Products.Archetypes.interfaces import IObjectInitializedEvent
 
+from plone.app.contenttypes.interfaces import IFile
+
 from StringIO import StringIO
 
 
@@ -117,6 +119,32 @@ class ChangeFileView(ChangeView):
     @property.Lazy
     def value(self):
         return self.content.getField('file').getRaw(self.content)
+
+    @property.Lazy
+    def filename(self):
+        filename = self.value.filename
+        if isinstance(filename, basestring):
+            filename = filename.lower()
+        return filename
+
+    @property.Lazy
+    def file_handle(self):
+        file_object = self.value
+        try:
+            # For blobs
+            file_handle = file_object.getIterator()
+        except AttributeError:
+            file_handle = StringIO(str(file_object.data))
+        return file_handle
+
+
+class ChangeDXFileView(ChangeView):
+
+    interface = IFile
+
+    @property.Lazy
+    def value(self):
+        return self.content.file
 
     @property.Lazy
     def filename(self):
