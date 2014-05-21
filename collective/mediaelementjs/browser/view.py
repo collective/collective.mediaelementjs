@@ -38,7 +38,6 @@ class File(BrowserView):
         )
 
     def audio(self):
-        import ipdb; ipdb.set_trace()
         if not self.isAudio:
             return
         info = IMediaInfo(self.context)
@@ -100,7 +99,6 @@ class DXFile(BrowserView):
         )
 
     def audio(self):
-        import ipdb; ipdb.set_trace()
         if not self.isAudio:
             return
         info = IMediaInfo(self.context)
@@ -112,11 +110,10 @@ class DXFile(BrowserView):
         )
 
     def filename(self):
-        context = aq_inner(self.context)
-        return context.filename()
+        return self.context.file.filename
 
     def contentType(self):
-        return self.context.contentType()
+        return self.context.file.contentType
 
     def href(self):
         context = aq_inner(self.context)
