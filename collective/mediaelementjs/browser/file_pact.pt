@@ -9,12 +9,6 @@
 
 <metal:content-core fill-slot="content-core">
 
-  <h3>Hello plone.app.contenttypes!</h3>
-
-  <div tal:content="view/isAudio"></div>
-  <div tal:content="view/filename"></div>
-
-
   <tal:main-macro metal:define-macro="content-core">
      <tal:video
         tal:condition="view/isVideo"
