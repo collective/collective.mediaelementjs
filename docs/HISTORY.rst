@@ -4,6 +4,8 @@ History
 0.4.2 - 20??-??-?? (unreleased)
 ==================
 
+* Upgrade mediaelement to 2.14.2 [simahawk]
+
 0.4.1 - 2013-07-18
 ==================
 
