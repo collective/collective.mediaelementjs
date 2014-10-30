@@ -1,5 +1,6 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
     xmlns:browser="http://namespaces.zope.org/browser"
     xmlns:plone="http://namespaces.plone.org/plone"
     i18n_domain="collective.mediaelementjs">
@@ -24,5 +25,12 @@
         permission="zope2.View"
         />
 
+    <browser:page zcml:condition="installed plone.app.contenttypes"
+        name="mediaelementjs"
+        for="plone.app.contenttypes.interfaces.IFile"
+        class=".view.DXFile"
+        template="file_pact.pt"
+        permission="zope2.View"
+        />
 
 </configure>

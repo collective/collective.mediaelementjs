@@ -1,0 +1,54 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="plone">
+<body>
+
+<metal:content-core fill-slot="content-core">
+
+  <tal:main-macro metal:define-macro="content-core">
+     <tal:video
+        tal:condition="view/isVideo"
+        tal:define="video view/video">
+      <video width="" height="" controls autoplay
+        tal:attributes="width video/width; height video/height">
+        <source src="" type="*/*"
+            tal:attributes="src view/href; type view/contentType" />
+        <object width="" height=""
+          type="application/x-shockwave-flash"
+          data="++resource++collective.mediaelementjs/flashmediaelement.swf"
+          tal:attributes="width video/width; height video/height">
+            <param name="movie" value="++resource++collective.mediaelementjs/flashmediaelement.swf" />
+            <param name="flashvars" value="" tal:attributes="value python:'file=%s' % view.href()" />
+        </object>
+      </video>
+      <p class="documentByLine" tal:content="video/duration"></p>
+    </tal:video>
+
+
+     <tal:audio
+        tal:condition="view/isAudio"
+        tal:define="audio view/audio">
+      <audio controls autoplay>
+        <source src="" type="*/*"
+            tal:attributes="src view/href; type view/contentType" />
+        <object width="" height=""
+          type="application/x-shockwave-flash"
+          data="++resource++collective.mediaelementjs/flashmediaelement.swf">
+            <param name="audio" value="++resource++collective.mediaelementjs/flashmediaelement.swf" />
+            <param name="flashvars" value="" tal:attributes="value python:'file=%s' % view.href()" />
+        </object>
+      </audio>
+      <p class="documentByLine" tal:content="audio/duration"></p>
+    </tal:audio>
+
+  </tal:main-macro>
+
+</metal:content-core>
+
+</body>
+</html>
+
