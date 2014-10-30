@@ -26,12 +26,12 @@
         handler=".events.ChangeFileView"
         />
 
-    <subscriber
+    <subscriber zcml:condition="installed plone.app.contenttypes"
         for="plone.app.contenttypes.interfaces.IFile
              zope.lifecycleevent.interfaces.IObjectCreatedEvent"
         handler=".events.ChangeDXFileView"
         />
-    <subscriber
+    <subscriber zcml:condition="installed plone.app.contenttypes"
         for="plone.app.contenttypes.interfaces.IFile
              zope.lifecycleevent.interfaces.IObjectModifiedEvent"
         handler=".events.ChangeDXFileView"

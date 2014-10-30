@@ -8,7 +8,11 @@ from collective.mediaelementjs.metadata_extraction import defensive_get
 from Products.ATContentTypes.interfaces.file import IFileContent
 from Products.Archetypes.interfaces import IObjectInitializedEvent
 
-from plone.app.contenttypes.interfaces import IFile
+try:
+    from plone.app.contenttypes.interfaces import IFile
+except ImportError:
+    from zope.interface import Interface as IFile
+
 
 from StringIO import StringIO
 

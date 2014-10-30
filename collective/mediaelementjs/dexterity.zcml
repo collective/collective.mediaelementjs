@@ -11,4 +11,12 @@
         provides=".behaviors.IMediaElementJSFile"
         />
 
+    <browser:page
+        name="mediaelementjs"
+        for=".behaviors.IMediaElementJSFile"
+        class=".dexterity.MediaElementJSFileView"
+        template="browser/file4x.pt"
+        permission="zope2.View"
+        />
+
 </configure>
