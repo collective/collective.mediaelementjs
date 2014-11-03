@@ -26,10 +26,18 @@
         />
 
     <browser:page zcml:condition="installed plone.app.contenttypes"
-        name="mediaelementjs"
-        for="plone.app.contenttypes.interfaces.IFile"
+        name="file_view"
+        for="collective.mediaelementjs.interfaces.IVideo"
         class=".view.DXFile"
-        template="file_pact.pt"
+        template="file_view.pt"
+        permission="zope2.View"
+        />
+
+    <browser:page zcml:condition="installed plone.app.contenttypes"
+        name="file_view"
+        for="collective.mediaelementjs.interfaces.IAudio"
+        class=".view.DXFile"
+        template="file_view.pt"
         permission="zope2.View"
         />
 
