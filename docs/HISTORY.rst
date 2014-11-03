@@ -1,7 +1,7 @@
 History
 =======
 
-0.4.2 - 20??-??-?? (unreleased)
+0.4.2 (2014-11-03)
 ==================
 
 * added subscriber and views for p.a.contenttypes
