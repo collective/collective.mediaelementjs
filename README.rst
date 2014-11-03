@@ -25,7 +25,7 @@ Audio
 Video
     MPEG-4, Ogg, WebM, Flash Video, Windows Media Video, MPEG and QuickTime (``.mov`` and ``.qt``)
 
-This package doesn't do any trancsoding, if you need that have a look at wildcard.media
+This package doesn't do any transcoding, if you need that have a look at wildcard.media
 
 Installation
 ============
