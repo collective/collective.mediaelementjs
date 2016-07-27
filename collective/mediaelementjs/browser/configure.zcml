@@ -9,13 +9,7 @@
 
     <browser:resourceDirectory
         name="collective.mediaelementjs"
-        directory="mediaelementjs"
-        />
-
-    <browser:resource
-        name="collective.mediaelement.js"
-        file="medialement-integration.js"
-        />
+        directory="mediaelementjs" />
 
     <browser:page
         name="mediaelementjs"

@@ -10,7 +10,11 @@
     <include package=".browser" />
     <include zcml:condition="installed plone.dexterity" file="dexterity.zcml"/>
 
-    <five:registerPackage package="." initialize=".initialize" />    
+    <include file="profiles.zcml" />
+    <include file="upgrades.zcml" />
+
+
+    <five:registerPackage package="." initialize=".initialize" />
 
     <adapter factory=".media.VideoInfoAdapter" />
     <adapter factory=".media.AudioInfoAdapter" />
@@ -38,15 +42,5 @@
         />
 
 
-
-zope.lifecycleevent.IObjectInitializedEvent
-
-    <genericsetup:registerProfile
-        name="default"
-        title="MediaElementJS"
-        directory="profiles/default"
-        provides="Products.GenericSetup.interfaces.EXTENSION"
-        />
-    <include file="upgrades.zcml" />
 
 </configure>

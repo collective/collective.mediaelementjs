@@ -1,0 +1,31 @@
+<configure xmlns="http://namespaces.zope.org/zope"
+           xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+           xmlns:zcml="http://namespaces.zope.org/zcml"
+           i18n_domain="collective.mediaelementjs">
+
+  <include package="Products.GenericSetup" file="meta.zcml" />
+
+  <genericsetup:registerProfile
+    zcml:condition="not-have plone-5"
+    name="default"
+    title="MediaElementJS"
+    directory="profiles/plone4"
+    description="MediaElementJS media player for Plone"
+    provides="Products.GenericSetup.interfaces.EXTENSION" />
+
+  <genericsetup:registerProfile
+    zcml:condition="have plone-5"
+    name="default"
+    title="MediaElementJS"
+    directory="profiles/plone5"
+    description="MediaElementJS media player for Plone"
+    provides="Products.GenericSetup.interfaces.EXTENSION" />
+
+  <genericsetup:registerProfile
+    name="install-base"
+    title="MediaElementJS base"
+    directory="profiles/base"
+    description=""
+    provides="Products.GenericSetup.interfaces.EXTENSION" />
+
+</configure>
