@@ -1,10 +1,12 @@
 History
 =======
 
-0.4.3 (unreleased)
+0.5.0 (unreleased)
 ==================
 
-- Nothing changed yet.
+- Upgrade for Plone5/Plone4
+- Upgrade MediaElement.js to 2.22.0
+  [agitator]
 
 
 0.4.2 (2014-11-03)
