@@ -9,7 +9,7 @@
 <body>
 
 <div metal:fill-slot="content-core">
-  aaaa
+
     <tal:main-macro metal:define-macro="content-core">
       <div class="video-wrapper">
        <tal:video

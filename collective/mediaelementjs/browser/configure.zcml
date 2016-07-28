@@ -11,6 +11,18 @@
         name="collective.mediaelementjs"
         directory="mediaelementjs" />
 
+    <browser:resource
+        zcml:condition="have plone-5"
+        name="collective.mediaelement-init.js"
+        file="mediaelement-init.js"
+        />
+
+    <browser:resource
+        zcml:condition="not-have plone-5"
+        name="collective.mediaelement.js"
+        file="medialement-integration.js"
+        />
+
     <browser:page
         name="mediaelementjs"
         for="Products.ATContentTypes.interface.IFileContent"
