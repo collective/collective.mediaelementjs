@@ -1,7 +1,7 @@
 History
 =======
 
-0.5.0 (unreleased)
+0.4.3 (unreleased)
 ==================
 
 - Upgrade for Plone5/Plone4
