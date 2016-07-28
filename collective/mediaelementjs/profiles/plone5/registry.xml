@@ -2,28 +2,9 @@
 <registry xmlns:i18n="http://xml.zope.org/namespaces/i18n"
           i18n:domain="collective.mediaelement">
 
-
-  <!-- <records prefix="plone.resources/example-justinclude"
-            interface='Products.CMFPlone.interfaces.IResourceRegistry'>
-     <value key="js">++plone++plone5resources/justinclude.js</value>
-  </records> -->
-
-  <!-- <records prefix="plone.bundles/collective.mediaelementjs"
-           interface='Products.CMFPlone.interfaces.IBundleRegistry'>
-    <value key="enabled">True</value>
-    <value key="compile">False</value>
-    <value key="jscompilation">++resource++collective.mediaelementjs/mediaelement-and-player.js</value>
-    <value key="csscompilation">++resource++collective.mediaelementjs/mediaelementplayer.css</value>
-    <value key="depends">plone</value>
-  </records> -->
-
-
   <records prefix="plone.resources/mediaelementjs"
             interface='Products.CMFPlone.interfaces.IResourceRegistry'>
      <value key="js">++resource++collective.mediaelementjs/mediaelement-and-player.js</value>
-     <value key="css">
-        <element>++resource++collective.mediaelementjs/mediaelementplayer.css</element>
-     </value>
   </records>
   <records prefix="plone.resources/mediaelementjs-init"
             interface='Products.CMFPlone.interfaces.IResourceRegistry'>
@@ -38,10 +19,13 @@
       <element>mediaelementjs</element>
       <element>mediaelementjs-init</element>
     </value>
+    <value key="stub_js_modules">
+      <element>jquery</element>
+    </value>
     <value key="enabled">True</value>
-    <!-- <value key="jscompilation">++plone++plone5resources/bundle.min.js</value>
-    <value key="csscompilation">++plone++plone5resources/bundle.css</value>
-    <value key="last_compilation">2015-05-28 00:00:00</value> -->
+    <value key="jscompilation">++resource++collective.mediaelement-bundle.js</value>
+    <value key="csscompilation">++resource++collective.mediaelementjs/mediaelementplayer.css</value>
+    <!-- <value key="last_compilation">2015-05-28 00:00:00</value> -->
   </records>
 
 </registry>

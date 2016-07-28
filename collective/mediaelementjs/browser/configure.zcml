@@ -18,6 +18,12 @@
         />
 
     <browser:resource
+        zcml:condition="have plone-5"
+        name="collective.mediaelement-bundle.js"
+        file="mediaelementjs-bundle.js"
+        />
+
+    <browser:resource
         zcml:condition="not-have plone-5"
         name="collective.mediaelement.js"
         file="medialement-integration.js"
