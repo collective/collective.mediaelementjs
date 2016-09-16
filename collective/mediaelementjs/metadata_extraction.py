@@ -1,10 +1,9 @@
-import logging
-logger = logging.getLogger('collective.mediaelementjs.metadata_extraction')
-
 from hachoir_parser.guess import createParser, guessParser
 from hachoir_metadata.metadata import extractMetadata
 from hachoir_core.error import HachoirError
 from hachoir_core.stream import InputStreamError, InputIOStream
+import logging
+logger = logging.getLogger('collective.mediaelementjs.metadata_extraction')
 
 
 def make_unicode(string):

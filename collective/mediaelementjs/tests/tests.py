@@ -24,6 +24,8 @@ class Layer(tcl_ptc.BasePTCLayer):
         # put resource registry to debug mode to avoid cachekyes in tests
         self.portal.portal_css.setDebugMode(True)
         self.portal.portal_javascripts.setDebugMode(True)
+
+
 layer = Layer([tcl_ptc.ptc_layer])
 
 
@@ -46,9 +48,7 @@ def test_suite():
             optionflags=optionflags,
             globs={'interact': interact},
             test_class=test_class
-        ) for file in FUNCTIONALTESTFILES]
-
-        + [doctest.DocFileSuite(
+        ) for file in FUNCTIONALTESTFILES] + [doctest.DocFileSuite(
             file,
             optionflags=optionflags,
             globs={'interact': interact},
