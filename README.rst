@@ -1,3 +1,6 @@
+collective.mediaelementjs
+=========================
+
 An integration of the MediaElementJS_ audio and video player
 for Plone.
 
