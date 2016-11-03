@@ -1,7 +1,4 @@
-include *.txt *.rst
-
-recursive-include docs *
-recursive-include collective *
-
-global-exclude *py[co] *~
-exclude .gitignore
+graft src/collective
+graft docs
+include *.rst
+global-exclude *.pyc *pyo *~ *.mo
