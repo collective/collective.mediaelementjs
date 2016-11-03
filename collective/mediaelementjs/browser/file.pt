@@ -15,7 +15,7 @@
        <tal:video
           tal:condition="view/isVideo"
           tal:define="video view/video">
-          <video width="" height="" controls autoplay
+          <video class="mejs-player" width="" height="" controls autoplay
             tal:attributes="width video/width; height video/height"
             style="width: 100%; height: 100%;">
             <source src="" type="*/*"
@@ -35,7 +35,7 @@
        <tal:audio
           tal:condition="view/isAudio"
           tal:define="audio view/audio">
-        <audio controls autoplay>
+        <audio class="mejs-player" controls autoplay>
           <source src="" type="*/*"
               tal:attributes="src view/href; type view/getContentType" />
           <object width="" height=""

@@ -1,9 +1,13 @@
+# -*- coding: utf-8 -*-
 from Acquisition import aq_inner
-import os
-
+from collective.mediaelementjs.interfaces import IMediaInfo, IAudio, IVideo
+from Products.CMFPlone import __version__
+from Products.CMFPlone.resources import add_resource_on_request
 from Products.Five.browser import BrowserView
 
-from collective.mediaelementjs.interfaces import IMediaInfo, IAudio, IVideo
+import os
+
+PLONE5 = __version__ > '4.999'
 
 
 class File(BrowserView):
@@ -15,6 +19,9 @@ class File(BrowserView):
         self.isAudio = None
 
     def __call__(self):
+        # utility function to add resource to rendered page
+        if PLONE5:
+            add_resource_on_request(self.request, 'mediaelementjs')
         self.update()
         return self.index()
 
@@ -76,6 +83,9 @@ class DXFile(BrowserView):
         self.isAudio = None
 
     def __call__(self):
+        # utility function to add resource to rendered page
+        if PLONE5:
+            add_resource_on_request(self.request, 'mediaelementjs')
         self.update()
         return self.index()
 

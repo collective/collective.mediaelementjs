@@ -2,6 +2,6 @@
 <metadata>
   <version>4</version>
   <dependencies>
-     <dependency>profile-collective.mediaelementjs:install-base</dependency>
+    <dependency>profile-collective.mediaelementjs:install-base</dependency>
   </dependencies>
 </metadata>

@@ -4,6 +4,7 @@ History
 0.4.3 (unreleased)
 ==================
 
+- Switched to inline initialization
 - Upgrade for Plone5/Plone4
 - Upgrade MediaElement.js to 2.22.0
   [agitator]
