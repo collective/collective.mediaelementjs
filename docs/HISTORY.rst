@@ -4,7 +4,8 @@ History
 0.4.3 (unreleased)
 ==================
 
-- Nothing changed yet.
+- Updated medialement to 2.23.2
+  [agitator]
 
 
 0.4.2 (2014-11-03)
