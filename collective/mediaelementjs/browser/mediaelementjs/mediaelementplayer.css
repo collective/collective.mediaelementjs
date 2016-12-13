@@ -1007,3 +1007,8 @@ div.mejs-speed-button {
 
 /* End: Skip Back */
 
+
+/* IMPORTANT override of default Plone link style */
+#content-core .mejs-player a {
+    border-bottom: 0;
+}
