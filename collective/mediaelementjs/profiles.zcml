@@ -28,6 +28,14 @@
     description=""
     provides="Products.GenericSetup.interfaces.EXTENSION" />
 
+  <genericsetup:registerProfile
+    name="uninstall"
+    title="MediaElementJS uninstall"
+    directory="profiles/uninstall"
+    description='Extension profile for Plone.'
+    provides="Products.GenericSetup.interfaces.EXTENSION"
+    />
+
   <utility
       factory=".setuphandlers.HiddenProfiles"
       name="collective.mediaelementjs-hiddenprofiles" />

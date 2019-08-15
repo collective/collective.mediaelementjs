@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<registry
+    i18n:domain="collective.mediaelement"
+    xmlns:i18n="http://xml.zope.org/namespaces/i18n">
+
+  <records remove="True"
+      prefix="plone.resources/mediaelementjs"
+      interface="Products.CMFPlone.interfaces.IResourceRegistry">
+  </records>
+
+</registry>

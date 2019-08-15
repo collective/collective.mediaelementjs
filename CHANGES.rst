@@ -1,6 +1,13 @@
 History
 =======
 
+0.4.4 (unreleased)
+==================
+
+- Added uninstall profile
+  [agitator]
+
+
 0.4.3 (unreleased)
 ==================
 
